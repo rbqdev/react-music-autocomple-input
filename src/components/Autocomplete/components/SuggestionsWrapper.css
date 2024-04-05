@@ -28,6 +28,6 @@
 
 .autocomplete--suggestions-empty {
   font-size: var(--font-size-sm);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-bold);
   text-align: center;
 }
