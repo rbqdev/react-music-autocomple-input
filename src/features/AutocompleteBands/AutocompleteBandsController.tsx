@@ -40,17 +40,21 @@ export const AutocompleteBandsController = () => {
       `/artist/?query=${autocompleteValue}&fmt=json&limit=5`
     );
 
-    if ("artists" in result) {
-      const { artists } = result;
-      setAutocompleteSuggestions(
-        artists.map(({ name }) => {
-          return {
-            name,
-          };
-        })
-      );
+    if ("error" in result) {
+      const { error } = result;
+      alert(error);
+      return;
     }
 
+    if ("artists" in result) {
+      const { artists } = result;
+      const updatedSuggestions = artists.map(({ name }) => {
+        return {
+          name,
+        };
+      });
+      setAutocompleteSuggestions(updatedSuggestions);
+    }
     setIsLoading(false);
   };
 
