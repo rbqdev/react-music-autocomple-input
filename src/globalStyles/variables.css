@@ -6,6 +6,7 @@
   --color-gray-light: #e4e4e7;
   --color-bg-light: #f4f4f5;
   --color-border: #e5e7eb;
+  --color-disabled: light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
 
   /* Font Sizes */
   --font-size-xs: 12px;
