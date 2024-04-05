@@ -1,0 +1,21 @@
+.autocomplete--input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-12);
+}
+
+.autocomplete--input-icon {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+  color: var(--color-gray);
+}
+
+.autocomplete--input-icon.loader {
+  animation: var(--animation-spin);
+}
+
+.autocomplete--input {
+  border: none !important;
+  outline: none;
+  color: var(--color-black);
+}

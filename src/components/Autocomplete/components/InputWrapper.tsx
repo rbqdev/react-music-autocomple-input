@@ -1,3 +1,5 @@
+import "./InputWrapper.css";
+
 import { LoaderIcon, SearchIcon } from "@/components/Icons";
 import { Input } from "@/components/Input";
 
