@@ -1,4 +1,5 @@
 import { HighlightWord } from "@/components/HighLightWord";
+
 import { AutocompleteSuggestion } from "../Autocomplete";
 
 type SuggestionsWrapperProps = {

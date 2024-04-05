@@ -1,4 +1,5 @@
 import "./Autocomplete.css";
+
 import { InputWrapper, InputWrapperProps } from "./components/InputWrapper";
 import { SuggestionsWrapper } from "./components/SuggestionsWrapper";
 
