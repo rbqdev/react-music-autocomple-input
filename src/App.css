@@ -1,0 +1,21 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  padding: var(--space-24);
+  background-color: var(--color-bg-light);
+  height: 100vh;
+}
+
+.app--content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 600px;
+  padding: var(--space-24);
+  gap: var(--space-24);
+  border: 1px solid var(--color-border);
+  border-radius: var(--rounded-md);
+  background-color: var(--color-white);
+}
