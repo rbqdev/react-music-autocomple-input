@@ -1,7 +1,7 @@
 import { LoaderIcon, SearchIcon } from "@/components/Icons";
 import { Input } from "@/components/Input";
 
-type InputWrapperProps = {
+export type InputWrapperProps = {
   value: string;
   placeholder?: string;
   isLoading?: boolean;
