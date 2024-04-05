@@ -1,8 +1,7 @@
 import { baseUrl } from "@/constants";
 
 type Error = {
-  error: boolean;
-  message: string;
+  error: string;
 };
 
 export const api = {
@@ -13,7 +12,7 @@ export const api = {
 
       return json as T;
     } catch {
-      return { error: true, message: "Something went wrong!" } as Error;
+      return { error: "Something went wrong!" } as Error;
     }
   },
 };
