@@ -45,7 +45,7 @@
     0 2px 4px -2px rgba(0, 0, 0, 0.1);
 
   /* Animations */
-  --animation-spin: spin 1s linear infinite;
+  --animation-spin: spin 0.5s linear infinite;
 }
 
 @keyframes spin {
