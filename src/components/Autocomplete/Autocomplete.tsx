@@ -20,17 +20,15 @@ export const Autocomplete = ({
 }: AutoCompleteProps) => {
   return (
     <div className="autocomplete">
-      <div className="autocomplete--content">
-        <InputWrapper
-          value={value}
-          placeholder={placeholder}
-          isLoading={isLoading}
-          onChange={onChange}
-        />
-        {suggestions && (
-          <SuggestionsWrapper value={value} suggestions={suggestions} />
-        )}
-      </div>
+      <InputWrapper
+        value={value}
+        placeholder={placeholder}
+        isLoading={isLoading}
+        onChange={onChange}
+      />
+      {suggestions && (
+        <SuggestionsWrapper value={value} suggestions={suggestions} />
+      )}
     </div>
   );
 };
