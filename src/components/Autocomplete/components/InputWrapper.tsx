@@ -7,16 +7,20 @@ export type InputWrapperProps = {
   value: string;
   placeholder?: string;
   isLoading?: boolean;
+  isDisabled?: boolean;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const InputWrapper = ({
   value,
   isLoading,
+  isDisabled,
   placeholder,
   onChange,
 }: InputWrapperProps) => (
-  <div className="autocomplete--input-wrapper">
+  <div
+    className={`autocomplete--input-wrapper ${isDisabled ? "disabled" : ""}`}
+  >
     {isLoading ? (
       <LoaderIcon className="autocomplete--input-icon loader" />
     ) : (
@@ -28,6 +32,7 @@ export const InputWrapper = ({
       className="autocomplete--input"
       placeholder={placeholder}
       value={value}
+      disabled={isDisabled}
       onChange={onChange}
     />
   </div>

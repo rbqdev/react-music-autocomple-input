@@ -4,6 +4,10 @@
   padding: 0 var(--space-12);
 }
 
+.autocomplete--input-wrapper.disabled {
+  background-color: var(--color-disabled);
+}
+
 .autocomplete--input-icon {
   width: var(--icon-size-sm);
   height: var(--icon-size-sm);

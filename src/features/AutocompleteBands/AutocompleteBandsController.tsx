@@ -30,6 +30,10 @@ export const AutocompleteBandsController = () => {
     setAutocompleteValue(value);
   };
 
+  const handleClickSuggestion = ({ name }: AutocompleteSuggestion) => {
+    alert(`Clicked: ${name}`);
+  };
+
   const getBands = async () => {
     if (!autocompleteValue || isLoading) {
       return;
@@ -75,8 +79,10 @@ export const AutocompleteBandsController = () => {
       value={autocompleteValue}
       suggestions={autocompleteSuggestions}
       isLoading={isLoading}
+      isDisabled={isLoading}
       placeholder="Type to search a band..."
       onChange={handleChangeValue}
+      onClickSuggestion={handleClickSuggestion}
     />
   );
 };

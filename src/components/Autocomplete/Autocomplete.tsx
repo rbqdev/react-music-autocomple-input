@@ -9,6 +9,8 @@ export type AutocompleteSuggestion = {
 
 type AutoCompleteProps = InputWrapperProps & {
   suggestions: AutocompleteSuggestion[] | null;
+  isDisabled: boolean;
+  onClickSuggestion: (suggestion: AutocompleteSuggestion) => void;
 };
 
 export const Autocomplete = ({
@@ -16,7 +18,9 @@ export const Autocomplete = ({
   suggestions = [],
   placeholder,
   isLoading,
-  onChange,
+  isDisabled,
+  onChange: onChangeInput,
+  onClickSuggestion,
 }: AutoCompleteProps) => {
   return (
     <div className="autocomplete">
@@ -24,10 +28,15 @@ export const Autocomplete = ({
         value={value}
         placeholder={placeholder}
         isLoading={isLoading}
-        onChange={onChange}
+        isDisabled={isDisabled}
+        onChange={onChangeInput}
       />
       {suggestions && (
-        <SuggestionsWrapper value={value} suggestions={suggestions} />
+        <SuggestionsWrapper
+          value={value}
+          suggestions={suggestions}
+          onClickSuggestion={onClickSuggestion}
+        />
       )}
     </div>
   );
