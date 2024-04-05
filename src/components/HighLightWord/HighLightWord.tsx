@@ -11,7 +11,7 @@ export const HighlightWord = ({ textBase, text }: HighlightWordProps) => {
         part.toLowerCase() === textBase.toLowerCase() ? (
           <mark key={`${part}-${index}`}>{part}</mark>
         ) : (
-          <span key={`${part}-${index}`}> {part} </span>
+          <span key={`${part}-${index}`}>{part}</span>
         )
       )}
     </p>
