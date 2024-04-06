@@ -12,34 +12,34 @@
 3. Describe 3 ways to pass information from a component to its
    PARENT.
 
-- Through a callback function
-- Through ContextApi / global state
-- Through event/socket or something like that
+   - Through a callback function
+   - Through ContextApi / global state
+   - Through event/socket or something like that
 
 4. Give 2 ways to prevent components from re-rendering.
 
-- Memoaize data calculation or complex functions properly with their dependencies correctly
-- Avoid create/change unecessary states
+   - Memoaize data calculation or complex functions properly with their dependencies correctly
+   - Avoid create/change unecessary states
 
 5. What is a fragment and why do we need it? Give an example where it might break my app.
 
-- It's a way to enable create a block of JSX/"HTML" code without need to add an extra element.
+   - It's a way to enable create a block of JSX/"HTML" code without need to add an extra element.
 
 6. Give 3 examples of the HOC pattern.
 
-- AuthenticationProvider which would help to check if should show the child pages or components or something unauthorized.
-- A Container/Context component which uses other reusable components
-- A ToastProvider which enables to use the hook `useToast()` on any child component
+   - AuthenticationProvider which would help to check if should show the child pages or components or something unauthorized.
+   - A Container/Context component which uses other reusable components
+   - A ToastProvider which enables to use the hook `useToast()` on any child component
 
 7. What's the difference in handling exceptions in promises,
    callbacks and async…await?
 
-- The difference it's with `async…await`we need to implement a try/catch to handle errors, and promises we have the methods `then()` and `catch()` from the promises itself to deal with success or errors.
+   - The difference it's with `async…await`we need to implement a try/catch to handle errors, and promises we have the methods `then()` and `catch()` from the promises itself to deal with success or errors.
 
 8. How many arguments does setState take and why is it async.
 
-- setState takes two arguments: value and callback func(optional)
-- And it's async because React use a way to batching all the setState calls to ensure that is calling only one setState behind the scenes and avoid unecessary re-renders.
+   - setState takes two arguments: value and callback func(optional)
+   - And it's async because React use a way to batching all the setState calls to ensure that is calling only one setState behind the scenes and avoid unecessary re-renders.
 
 9. List the steps needed to migrate a Class to Function
    Component.
@@ -48,11 +48,11 @@
 
 10. List a few ways styles can be used with components.
 
-- Styled component (CSS-in-JS)
-- Pre-processors (SASS, LESS) with classNames
-- Pure CSS files with classNames
-- Inline styles on HTML tags
+    - Styled component (CSS-in-JS)
+    - Pre-processors (SASS, LESS) with classNames
+    - Pure CSS files with classNames
+    - Inline styles on HTML tags
 
 11. How to render an HTML string coming from the server.
 
-- We should call this api request before the component render, store the result and then render on component return embraced by any html tag.
+    - We should call this api request before the component render, store the result and then render on component return embraced by any html tag.
