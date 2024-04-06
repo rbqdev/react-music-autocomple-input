@@ -22,4 +22,5 @@
   border: none !important;
   outline: none;
   color: var(--color-black);
+  background: transparent;
 }
