@@ -25,6 +25,7 @@ const SuggestionsList = ({
         key={`${suggestion.name}-${key}`}
         className="autocomplete--suggestion"
         onClick={() => onClickSuggestion(suggestion)}
+        role="button"
       >
         <HighlightWord textBase={value} text={suggestion.name} />
       </div>
