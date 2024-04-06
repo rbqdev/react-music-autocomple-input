@@ -1,20 +1,20 @@
 1. What is the difference between Component and PureComponent?
    Give an example where it might break my app.
 
-   - The difference is that PureComponent performs better the `shouldComponentUpdate()` method avoiding unecessary or unitentional re-renders on state or props changes.
-   - I think an example of breaking the app, is when we have some child components built with Component class and making a lot of unecessary re-renders or even causing a infinite loop or memory leak.
+- The difference is that PureComponent performs better the `shouldComponentUpdate()` method avoiding unecessary or unitentional re-renders on state or props changes.
+- I think an example of breaking the app, is when we have some child components built with Component class and making a lot of unecessary re-renders or even causing a infinite loop or memory leak.
 
 2. Context + ShouldComponentUpdate might be dangerous. Why is
    that?
 
-   - I think it's because ShouldComponentUpdate compare state and props to check if should re-render and the Context doesn't pass data exactly as props as a convencional props of a component, so that combination it's not a good practice.
+- I think it's because ShouldComponentUpdate compare state and props to check if should re-render and the Context doesn't pass data exactly as props as a convencional props of a component, so that combination it's not a good practice.
 
 3. Describe 3 ways to pass information from a component to its
    PARENT.
 
-   - Through a callback function
-   - Through ContextApi / global state
-   - Through event/socket or something like that
+- Through a callback function
+- Through ContextApi / global state
+- Through event/socket or something like that
 
 4. Give 2 ways to prevent components from re-rendering.
 
@@ -23,7 +23,7 @@
 
 5. What is a fragment and why do we need it? Give an example where it might break my app.
 
-   - It's a way to enable create a block of JSX/"HTML" code without need to add an extra element.
+- It's a way to enable create a block of JSX/"HTML" code without need to add an extra element.
 
 6. Give 3 examples of the HOC pattern.
 
@@ -34,7 +34,7 @@
 7. What's the difference in handling exceptions in promises,
    callbacks and async…await?
 
-   - The difference it's with `async…await`we need to implement a try/catch to handle errors, and promises we have the methods `then()` and `catch()` from the promises itself to deal with success or errors.
+- The difference it's with `async…await`we need to implement a try/catch to handle errors, and promises we have the methods `then()` and `catch()` from the promises itself to deal with success or errors.
 
 8. How many arguments does setState take and why is it async.
 
