@@ -1,13 +1,13 @@
 1. What is the difference between Component and PureComponent?
    Give an example where it might break my app.
 
-- The difference is that PureComponent performs better the `shouldComponentUpdate()` method avoiding unecessary or unitentional re-renders on state or props changes.
-- I think an example of breaking the app, is when we have some child components built with Component class and making a lot of unecessary re-renders or even causing a infinite loop or memory leak.
+   - The difference is that PureComponent performs better the `shouldComponentUpdate()` method avoiding unecessary or unitentional re-renders on state or props changes.
+   - I think an example of breaking the app, is when we have some child components built with Component class and making a lot of unecessary re-renders or even causing a infinite loop or memory leak.
 
 2. Context + ShouldComponentUpdate might be dangerous. Why is
    that?
 
-- I think it's because ShouldComponentUpdate compare state and props to check if should re-render and the Context doesn't pass data exactly as props as a convencional props of a component, so that combination it's not a good practice.
+   - I think it's because ShouldComponentUpdate compare state and props to check if should re-render and the Context doesn't pass data exactly as props as a convencional props of a component, so that combination it's not a good practice.
 
 3. Describe 3 ways to pass information from a component to its
    PARENT.
