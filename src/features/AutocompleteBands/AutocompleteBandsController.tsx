@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { api } from "@/api";
 import {
@@ -26,15 +26,14 @@ export const AutocompleteBandsController = () => {
   };
 
   const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.currentTarget.value;
-    setAutocompleteValue(value);
+    setAutocompleteValue(event.currentTarget.value);
   };
 
   const handleClickSuggestion = ({ name }: AutocompleteSuggestion) => {
     alert(`Clicked: ${name}`);
   };
 
-  const getBands = async () => {
+  const getBands = useCallback(async () => {
     if (!autocompleteValue || isLoading) {
       return;
     }
@@ -60,11 +59,7 @@ export const AutocompleteBandsController = () => {
       setAutocompleteSuggestions(updatedSuggestions);
     }
     setIsLoading(false);
-  };
-
-  useEffect(() => {
-    resetAutoCompleteSuggestions();
-  }, [autocompleteValue]);
+  }, [autocompleteValue, isLoading]);
 
   useDebounce(
     () => {
@@ -73,6 +68,10 @@ export const AutocompleteBandsController = () => {
     debounceTime,
     [autocompleteValue]
   );
+
+  useEffect(() => {
+    resetAutoCompleteSuggestions();
+  }, [autocompleteValue]);
 
   return (
     <Autocomplete
