@@ -1,4 +1,4 @@
-# Deel Frontend Challenge
+# React Music Bands Highlight Autocomplet Input
 
 ## Getting Started
 
